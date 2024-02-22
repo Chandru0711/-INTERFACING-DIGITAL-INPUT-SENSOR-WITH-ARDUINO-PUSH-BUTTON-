@@ -55,31 +55,51 @@ FIGURE-02
 ![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
 
 
-
-FIGURE -03
-
-
+![image](https://github.com/Chandru0711/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/144979368/555795ac-e785-4b7d-85f2-7ac1e1d63f0f)
 
 
 ## PROGRAM 
  
- 
+```
+int led=3;
+int pushbutton=4;
 
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(pushbutton, INPUT);
+}
+void loop()
+{
+  int pb;
+  pb=digitalRead(pushbutton);
+  if(pb==HIGH)
+  {
+    digitalWrite(led,HIGH);
+    delay(5000);
+    digitalWrite(led,LOW);
+    delay(5000);
+  }
+  else
+  {
+    digitalWrite(led,LOW);
+    delay(500);
+  }
+  
+}  
 
-
-
-
-
-
-
-
- 
- 
- 
-
-
+```
 
 ## OUTPUT OF SIMULATION :
 
-[My image](username.github.com/repository/img/image.jpg)
+In On Condition:
 
+![image](https://github.com/Chandru0711/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/144979368/f96a9750-c272-42c5-8cce-48379337c866)
+
+In Off Condition :
+
+![image](https://github.com/Chandru0711/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/144979368/a4b52e63-653f-4986-9a97-8227db00cd48)
+
+## RESULT :
+
+Thus the simulation output on interfacing digital input sensor with arduino has been completed in tinkercad.
